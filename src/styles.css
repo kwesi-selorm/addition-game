@@ -1,0 +1,289 @@
+* {
+  font-family: "Luckiest Guy";
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #c1ffd7;
+  font-size: 0.8rem;
+  margin: 0 0.3rem 0;
+  text-align: center;
+  padding: 0;
+}
+
+/* Loading page */
+.loader-container {
+  background-color: #c1ffd7;
+  height: 100%;
+  /* margin: 0 auto; */
+  padding-top: 50%;
+  text-align: center;
+}
+
+/* Heading */
+.navbar {
+  color: #2d4059;
+  text-align: center;
+  padding: 1.5px;
+}
+
+.navbar h2 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin: 0 auto;
+}
+
+/* Status */
+.status-container {
+  background-color: #ea6227;
+  border-radius: 15px;
+  color: #fff;
+
+  font-size: 0.6rem;
+  margin: 35px auto 5px;
+  width: 20%;
+
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-container > * {
+  margin: 0 auto;
+}
+
+.countdown-timer {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.score {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+/* Start */
+.start {
+  text-align: center;
+  margin: 10px auto;
+}
+
+#difficulty {
+  color: #2d4059;
+  font-family: Bangers;
+  font-size: 1rem;
+  height: fit-content;
+  padding: 0.2rem;
+  min-width: 50px;
+  width: fit-content;
+}
+
+.difficulty-option {
+  font-family: Bangers;
+  font-size: 1rem;
+}
+
+/* Numbers */
+.operations {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 0 auto 10px;
+  width: 30%;
+}
+
+.start-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 20px auto 40px;
+  text-align: center;
+  width: 30%;
+}
+
+.operand {
+  color: #2d4059;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 3px 30px 3px;
+}
+
+.operator {
+  color: #2d4059;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.response-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  width: 30%;
+}
+
+.answer-box {
+  background-color: #ea6227;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.7rem;
+  position: relative;
+  text-align: center;
+  min-height: 80px;
+  min-width: 80px;
+  width: 120px;
+  height: 120px;
+}
+
+.answer-box h3 {
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.answer-choices {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 10px auto;
+  width: 20%;
+}
+
+.choice {
+  background-color: #2d4059;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  min-width: 40px;
+  min-height: 40px;
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+
+.choice:active {
+  border: none;
+  outline: none;
+}
+
+/* Scorecard */
+.scorecard {
+  background-color: #c1ffd7;
+  color: #2d4059;
+  height: 100vw;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+}
+
+.scorecard-h1 {
+  font-size: 6vw;
+  margin-top: 5%;
+}
+
+.scorecard-h2 {
+  font-size: 3vw;
+  margin-top: 5%;
+}
+
+.restart-button {
+  margin-top: 10px;
+}
+
+/* Screen responsiveness */
+/* Mobile */
+@media (max-width: 400px) {
+  * {
+    font-size: 1rem;
+  }
+
+  .status-container {
+    width: 80%;
+  }
+
+  .response-box {
+    width: 80%;
+  }
+
+  .scorecard h1 {
+    margin-top: 70%;
+  }
+}
+
+/* Tablet, Desktop*/
+@media (min-width: 1000px) {
+  * {
+    font-size: 1rem;
+  }
+
+  .navbar h2 {
+    font-size: 4rem;
+  }
+
+  .response-box {
+    margin-top: 20px;
+    width: 20%;
+  }
+
+  .answer-choices {
+    margin: 3rem auto;
+    width: 10%;
+  }
+
+  .scorecard h1 {
+    margin-top: 5%;
+  }
+}
+
+/* Desktop HD */
+@media (min-width: 1700px) {
+  * {
+    font-size: 1.5rem;
+  }
+
+  .navbar h2 {
+    font-size: 4rem;
+  }
+
+  .response-box {
+    margin-top: 50px;
+    width: 20%;
+  }
+
+  .answer-choices {
+    margin: 3rem auto;
+    width: 10%;
+  }
+
+  .scorecard h1 {
+    margin-top: 5%;
+  }
+}
