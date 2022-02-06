@@ -29,7 +29,6 @@ export default function Scorecard(props) {
         onClick={() => {
           navigate("/");
           window.location.reload();
-          // Wait for window load
         }}
         style={{ fontFamily: "Luckiest Guy" }}
       >

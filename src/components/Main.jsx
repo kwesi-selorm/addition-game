@@ -6,6 +6,7 @@ import {
   faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Form from "react-bootstrap/Form";
 
 function Main(props) {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function Main(props) {
       </div>
 
       <div className="start-div">
-        <select id="difficulty" defaultValue="">
+        <Form.Select id="difficulty" defaultValue="" size="lg">
           <option className="difficulty-option" value="">
             Level
           </option>
@@ -35,7 +36,7 @@ function Main(props) {
           <option className="difficulty-option" value="hard">
             Hard
           </option>
-        </select>
+        </Form.Select>
 
         {/* Start and Pause buttons */}
         <div className="start-pause-div">
