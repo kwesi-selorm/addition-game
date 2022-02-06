@@ -6,7 +6,12 @@ import {
 } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { shuffleArray, correctAnswer, wrongAnswer } from "../functions.js";
+import {
+  createArray,
+  shuffleArray,
+  correctAnswer,
+  wrongAnswer,
+} from "../functions.js";
 import $ from "jquery";
 import Scorecard from "./Scorecard";
 import Navbar from "./Navbar";
@@ -55,17 +60,10 @@ function App() {
       const result = easyNumber1 + easyNumber2;
       setAnswer(result);
 
-      let choices = [
-        result,
-        Math.floor(Math.random() * 20) + 1,
-        Math.floor(Math.random() * 20) + 1,
-      ];
+      let choices = [];
+      choices.push(result);
 
-      // Replace a repeated answer choice
-      while (choices[1] === choices[2]) {
-        choices.pop();
-        choices.push(Math.floor(Math.random() * 20) + 1);
-      }
+      choices = createArray(choices, 20);
 
       let newChoices = shuffleArray(choices);
       setAnswerOptions(newChoices);
@@ -86,17 +84,10 @@ function App() {
       const result = mediumNumber1 + mediumNumber2;
       setAnswer(result);
 
-      let choices = [
-        result,
-        Math.floor(Math.random() * 40) + 1,
-        Math.floor(Math.random() * 40) + 1,
-      ];
+      let choices = [];
+      choices.push(result);
 
-      // Replace a repeated answer choice
-      while (choices[1] === choices[2]) {
-        choices.pop();
-        choices.push(Math.floor(Math.random() * 40) + 1);
-      }
+      choices = createArray(choices, 40);
 
       let newChoices = shuffleArray(choices);
       setAnswerOptions(newChoices);
@@ -120,17 +111,10 @@ function App() {
       const result = hardNumber1 + hardNumber2;
       setAnswer(result);
 
-      let choices = [
-        result,
-        Math.floor(Math.random() * 100) + 1,
-        Math.floor(Math.random() * 100) + 1,
-      ];
+      let choices = [];
+      choices.push(result);
 
-      // Replace a repeated answer choice
-      while (choices[1] === choices[2]) {
-        choices.pop();
-        choices.push(Math.floor(Math.random() * 100) + 1);
-      }
+      choices = createArray(choices, 100);
 
       let newChoices = shuffleArray(choices);
       setAnswerOptions(newChoices);

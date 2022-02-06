@@ -1,3 +1,17 @@
+function createArray(array, max) {
+  if (array.length === 3) {
+    return array;
+  }
+  let val = Math.floor(Math.random() * max) + 1;
+  for (let i = 0; i < 3; i++) {
+    if (array[i] === val) {
+      return createArray(array, max);
+    }
+  }
+  array.push(val);
+  return createArray(array, max);
+}
+
 function shuffleArray(array) {
   for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
@@ -26,4 +40,4 @@ function wrongAnswer(id1, id2) {
   setTimeout(() => (symbol.style.transform = "scale(1)"), 200);
 }
 
-export { shuffleArray, correctAnswer, wrongAnswer };
+export { createArray, shuffleArray, correctAnswer, wrongAnswer };
