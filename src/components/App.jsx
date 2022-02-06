@@ -15,7 +15,7 @@ import Main from "./Main";
 function App() {
   const [loading, setLoading] = useState(true);
   const [active, setActive] = useState(false);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(60);
   const [score, setScore] = useState(0);
   const [operandNumber1, setOperandNumber1] = useState(0);
   const [operandNumber2, setOperandNumber2] = useState(0);
