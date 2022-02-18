@@ -143,6 +143,7 @@ function App() {
   function handleNextQuestion(event) {
     // Capture user answer
     const userAnswer = event.target.value;
+    $(".choice").attr("disabled", true);
 
     // Response based on user's answer
     if (userAnswer == answer) {
@@ -151,7 +152,7 @@ function App() {
     } else {
       wrongAnswer("answer", "times-circle");
     }
-    setTimeout(handleStartAndNext, 1000);
+    setTimeout(handleStartAndNext, 200);
   }
 
   return (
