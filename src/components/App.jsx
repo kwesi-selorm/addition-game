@@ -18,7 +18,7 @@ import Navbar from "./Navbar";
 import Main from "./Main";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   const [active, setActive] = useState(false);
   const [seconds, setSeconds] = useState(60);
   const [score, setScore] = useState(0);
@@ -26,7 +26,7 @@ function App() {
   const [operandNumber2, setOperandNumber2] = useState(0);
   const [adder, setAdder] = useState(0);
   const [answer, setAnswer] = useState(0);
-  const [answerOptions, setAnswerOptions] = useState();
+  const [, setAnswerOptions] = useState();
 
   const [option1, setOption1] = useState(0);
   const [option2, setOption2] = useState(0);
